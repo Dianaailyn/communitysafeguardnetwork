@@ -1,0 +1,925 @@
+/* General styles */
+body {
+  font-family: Nulshock bold;
+  margin: 0;
+  padding: 0;
+  background-color: #003262;
+}
+
+/* Cargar la fuente Nulshock Bold desde el archivo .otf */
+@font-face {
+  font-family: 'Nulshock Bold';  /* Nombre de la fuente */
+  src: url('fuentes/nulshock\ bd.otf') format('opentype'); /* Archivo .otf */
+  font-weight: bold;  /* Versión en negrita */
+  font-style: normal;
+}
+
+/*************************Encabezado***************************/
+
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 40px 0; /* Agrega espacio al header */
+  height: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Ajusta el logo */
+header .logo {
+  height: 40%; /* Ocupa toda la altura del header */
+  max-height: 80%; /* Controla que no sea demasiado grande */
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo */
+}
+
+/* Imagen del logo */
+header .logo img {
+  height: 100%; /* Asegura que se escala proporcionalmente */
+  max-height: 80%; /* Limita su tamaño máximo */
+  object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Estilo del menú */
+header .menu {
+  align-items: center; /* Centra verticalmente el menú */
+  gap: 20px; /* Espaciado entre elementos del menú */
+  font-size: 16px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu a {
+  color: #003262;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #FFC72C;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color:rgb(255, 255, 255);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-left: 20px;
+}
+
+
+/* Contenedor del interruptor de idioma */
+.language-switcher {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  margin-bottom: 50px; /* Espacio debajo del cambio de idioma */
+}
+
+/* Botones de cambio de idioma */
+.language-btn {
+  background-color: #003262;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-btn:hover {
+  background-color: #FFC72C;
+  color: #000;
+}
+
+.lang-button {
+  background: none;
+  border: none;
+  color: #0c2c4a;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.lang-button:hover {
+  color: #FFC72C;
+}
+
+.flag {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+
+
+/************** Botón REPORT A SCAM ***********/
+.report-scam-button {
+  position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 200px;
+    z-index: 2;
+  background-color: #e53935;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px; /* Espacio debajo de los botones de idioma */
+  width: 150px; /* En pantallas pequeñas ocupa todo el ancho */
+  text-align: center;
+}
+
+/* Efecto hover para el botón REPORT A SCAM */
+.report-scam-button:hover {
+    background-color: #FFC72C;
+    color: #000;
+}
+
+/* Asegura espacio adecuado entre elementos */
+.main-menu a:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 1024px) {
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%; /* Ajusta el ancho del header */
+    max-width: 1200px; /* Si quieres limitar un máximo de ancho */
+    margin: 0 auto; /* Centra el header */
+  }
+  .language-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .report-scam-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%; /* Ajusta el ancho del header */
+    margin: 0 auto; /* Centra el header */
+  }
+  .language-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .report-scam-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+
+
+/********** MENÚ HAMBURGUESA PARA DISPOSITIVOS MÁS PEQUEÑOS **********/
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.hamburger-menu span {
+  height: 3px;
+  width: 25px;
+  background-color: #003262;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%; /* Hace que el menú salga debajo del header */
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .submenu {
+    position: relative;
+    top: 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+
+/***************LOGO MENÚ HAMBURGUESA*****/
+
+/* Asegurarse de que el logo esté visible en pantallas grandes */
+@media (min-width: 768px) {
+  .logo {
+    display: block; /* El logo siempre es visible en pantallas grandes */
+  }
+}
+
+/* En pantallas pequeñas, el logo se oculta solo cuando el menú hamburguesa está activo */
+@media (max-width: 767px) {
+  .logo.hidden {
+    display: none; /* El logo solo desaparece cuando se le aplica la clase 'hidden' */
+  }
+}
+
+
+
+/**********************************PÁGINA PRINCIPAL*****************/
+
+/****carrusel***/
+
+.slider-box{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-box ul {
+  display: flex;
+  padding: 0;
+  width: 400%; 
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+  width: 100vw; /* Ancho completo */
+  min-height: 300px; /* Altura mínima */
+  height: auto; /* Altura ajustada al contenido */
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente */
+  justify-content: space-between; /* Centra el texto horizontalmente */
+  list-style: none;
+  position: relative;
+  padding: 20px;
+}
+
+.texto {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  color: #FFC72C; 
+  width: 50%;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.imagen {
+  width: 50%; /* Ocupa la otra mitad del ancho del slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen img {
+  max-width: 100%; /* Ajusta la imagen al espacio disponible */
+  height: auto; /* Mantén la proporción */
+}
+
+/*Botón carrusel*/
+
+/* Estilo del botón */
+
+.btn-slide {
+  display: inline-block; /* Hace que el botón se ajuste a su contenido */
+  margin-top: 20px; /* Espaciado superior para separarlo del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #003262; /* Letras en azul */
+  font-size: 1rem; /* Tamaño del texto */
+  text-decoration: none; /* Quita el subrayado */
+  border: 2px solid #003262; /* Borde azul */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animación suave */
+}
+
+/* Efecto hover */
+.btn-slide:hover {
+  background-color: #FFC72C; /* Fondo dorado al pasar el cursor */
+  color: #ffffff; /* Letras blancas */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .btn-slide {
+    width: 50%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+    text-align: center; /* Centra el texto dentro del botón */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column; /* Cambia a diseño en columna para pantallas pequeñas */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .texto {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+    margin-bottom: 20px; /* Espaciado entre el texto y la imagen */
+  }
+
+  .btn-slide {
+    width: 60%; /* Botón ocupa menos espacio en pantallas pequeñas */
+  }
+
+  .imagen img {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    margin-top: 20px;
+  }
+}
+
+/**************RESPONSIVE CARRUSEL******/
+
+@media (max-width:991px) {
+
+  body {
+    padding: 30px;
+  }
+
+  .slider-box {
+    width: 100%;
+  }
+
+  .slider-box li {
+    min-height: 200px; /* Ajusta la altura mínima */
+    padding: 20px;
+    display: flex; /* Centrado del contenido */
+    justify-content: center;
+    align-items: center; /* Centrado vertical */
+  }
+
+  .texto {
+    top: 50px;
+    padding: 0 10px;
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding-bottom: 30px; /* Aumenta el espacio inferior del texto */
+  }
+
+  .texto h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  .texto p {
+    font-size: 0.9rem; /* Ajuste del tamaño del texto */
+    line-height: 1.5; /* Mejora la legibilidad */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-box li {
+    flex-direction: column; /* Apila el texto y la imagen */
+  }
+
+  .texto, .imagen {
+    width: 100%; /* Ocupan todo el ancho */
+  }
+
+  .imagen img {
+    max-width: 80%; /* Reduce un poco el tamaño de las imágenes */
+    margin: 0 auto; /* Centra la imagen */
+  }
+}
+
+
+/**botones adelante y atras**/
+
+/* Contenedor de los puntos */
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dots span.active {
+  background-color: #FFC72C; /* Color del punto activo */
+}
+
+/**BLOQUE 2**/
+
+/* ABOUT US Section */
+.about-us {
+  padding: 50px 20px;
+  background-color: #FFC72C;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 90% 35%, 75% 85%, 50% 70%, 25% 85%, 10% 35%, 50% 0%);
+  flex: 1 1 300px;
+  padding: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 2 1 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #003262;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-about {
+  display: inline-block;
+  background-color: #003262;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-about:hover {
+  background-color: #000000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+}
+
+/*****BLOQUE 3****/
+
+.our-director {
+  background-color: #003262; /* Color de fondo diferente */
+  padding: 50px 0;
+}
+
+.our-director .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.our-director .text {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.our-director .text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #FFC72C;
+  margin-bottom: 10px;
+}
+
+.our-director .text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.our-director .director-photo img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .our-director .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .our-director .text {
+      margin-bottom: 20px;
+  }
+
+  .our-director .director-photo {
+      display: flex;
+      justify-content: center;
+  }
+
+  .our-director .director-photo img {
+      max-width: 100%;
+  }
+}
+
+/*******************************************SUB-PÁGINAS SLIDE**************************************/
+
+
+/* Estilización del contenido de la noticia */
+.contenido-noticia {
+  background-color: #003262;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* Título */
+.contenido-noticia h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFC72C;
+  text-align: center;
+}
+
+/* Texto de la noticia */
+.contenido-noticia p {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+}
+
+/* Imagen */
+.imagen-noticia {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Responsividad */
+
+/* Para pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+  .contenido-noticia {
+      padding: 20px;
+      max-width: 90%;
+  }
+  
+  .contenido-noticia h1 {
+      font-size: 2.5rem;
+  }
+  
+  .contenido-noticia p {
+      font-size: 1.2rem;
+  }
+
+  .btn-slide {
+      padding: 12px 20px;
+      font-size: 1rem;
+  }
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .contenido-noticia {
+      padding: 15px;
+      max-width: 100%;
+      margin: 10px;
+  }
+  
+  .contenido-noticia h1 {
+      font-size: 2rem;
+      text-align: center;
+  }
+  
+  .contenido-noticia p {
+      font-size: 1rem;
+  }
+
+  .btn-slide {
+      width: 50%;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+  }
+
+  .imagen-noticia {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+  }
+}
+
+/*********************REPORT A SCAM*****************/
+
+body.report{
+  background-color: #ffffff;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Ajuste del iframe */
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* Ajuste en dispositivos móviles */
+@media (max-width: 600px) {
+  iframe {
+      height: 500px;
+  }
+}
+
+/********************************************MISION & VISION *****************************/
+
+/* Estilos específicos para la subpágina de Misión, Visión y Valores */
+.mision {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.mision h1 {
+  color: #003262; /* Azul para el título principal */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mision p {
+  color: #003262; /* Azul para el texto */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Estilos para la sección de Misión, Visión y Valores */
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mission-vision .column {
+  background-color: #003262;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision .column img {
+  width: 100%; /* La imagen ocupa el 100% del ancho de la columna */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Hace que la imagen cubra el área sin deformarse */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.mission-vision .column p {
+  color: #ffffff; /* Azul para el texto */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.mission-vision .column h2 {
+  font-size: 24px;
+  color: #FFC72C; /* Dorado para los títulos */
+  margin-bottom: 20px;
+}
+
+/* Efecto hover para las columnas */
+.mission-vision .column:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de las columnas al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .mission-vision .column {
+      width: 45%; /* En pantallas medianas, 2 columnas */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision .column {
+      width: 100%; /* En pantallas pequeñas, 1 columna */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************OUR WORK Y OUR TEAM******************************/
+
+/* Estilos generales para los miembros del equipo */
+.team-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid para hacer el diseño responsive */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Centra los elementos dentro del contenedor */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff; /* Azul para el fondo de los recuadros */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-decoration: none; /* Elimina subrayados */
+}
+
+.team-member img {
+  width: 150px; /* Tamaño fijo para todas las imágenes */
+  height: 150px; /* Mantiene las imágenes de tamaño igual */
+  object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #FFC72C; /* Nombres en dorado */
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #003262; /* Descripción en blanco */
+}
+
+/* Efecto hover para agrandar y mejorar el diseño del recuadro */
+.team-member:hover {
+  transform: scale(1.05); /* Agranda el recuadro cuando se pasa el cursor */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .team-container {
+      grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas pequeñas */
+      gap: 15px;
+  }
+
+  .team-member {
+      padding: 15px; /* Reduce el padding en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .team-container {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+
+  .team-member {
+      padding: 10px; /* Reduce aún más el padding */
+  }
+}
