@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diseño.css">
+    <title>Página principal</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <button class="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu">
+            <li class="menu-item dropdown">
+              <a href="#">ABOUT</a>
+              <ul class="submenu">
+                <li><a href="#">MISION&VISION</a></li>
+                <li><a href="#">OUR WORK</a></li>
+                <li><a href="#">OUR TEAM</a></li>
+                <li><a href="#">BOARD MEMBERS</a></li>
+              </ul>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="#">PROGRAMS</a>
+              <ul class="submenu">
+                <li><a href="#">FRAUD PREVENTION</a></li>
+                <li><a href="#">HOTLINE</a></li>
+                <li><a href="#">GRC</a></li>
+                <li><a href="#">NETWORK SECURITY</a></li>
+                <li><a href="#">VOLUNTEER OPPORTUNITIES</a></li>
+              </ul>
+            </li>
+            <li><a href="#">GET INVOLVED</a></li>
+            <li><img src="images/logo.png" alt="Logo" class="logo"></li>
+            <li><a href="#">NEWSLETTER</a></li>
+            <li class="menu-item dropdown">
+              <a href="#">CONTACT</a>
+              <ul class="submenu">
+                <li><a href="#">HOTLINE2</a></li>
+                <li><a href="#">SUPPORT EMAIL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="language-switch">
+            <button class="lang-button">
+              <img src="images/usa.png" alt="English" class="flag">
+              EN
+            </button>
+            <button class="lang-button">
+              <img src="images/mexico.png" alt="Español" class="flag">
+              ES
+            </button>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Carrusel -->
+    <div class="slider-box">
+      <ul class="slider">
+        <li>
+          <img src="images/berkeley.png" alt="">
+          <div class="texto">
+            <h2>SLIDER 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nesciunt! Placeat fugiat quidem laboriosam.</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/berkeley.png" alt="">
+          <div class="texto">
+            <h2>SLIDER 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nesciunt! Placeat fugiat quidem laboriosam.</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/berkeley.png" alt="">
+          <div class="texto">
+            <h2>SLIDER 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nesciunt! Placeat fugiat quidem laboriosam.</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/berkeley.png" alt="">
+          <div class="texto">
+            <h2>SLIDER 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nesciunt! Placeat fugiat quidem laboriosam.</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Botones de navegación -->
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+      <script src="nueva.js"></script>
+</body>
+</html>
